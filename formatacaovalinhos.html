@@ -1015,6 +1015,26 @@
       margin: 0 auto;
     }
 
+    /* --- NOVO: LINKS HORIZONTAIS NO FOOTER (igual ao index) --- */
+    .footer-links-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-links-horizontal a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .footer-links-horizontal a:hover {
+      color: var(--primary);
+    }
+
     /* BOTÃO FLUTUANTE */
     .float-wa {
       position: fixed;
@@ -1350,16 +1370,22 @@
 
   </main>
 
-  <!-- FOOTER (idêntico ao index) -->
+  <!-- FOOTER (com links horizontais) -->
   <footer class="footer-info">
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Paulo Fagoto Informática</h4>
         <p>Especialista em formatação de PC e notebook em Valinhos/SP. Mais de 10 anos de experiência e centenas de clientes satisfeitos.</p>
         <p style="margin-top:0.8rem; color:var(--primary); font-weight:bold; font-size:0.85rem;">CNPJ: 64.383.742/0001-26</p>
-        <a href="paulofagoto.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Sobre Mim</a>
-        <a href="depoimentos.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Depoimentos</a>
-        <a href="downloads.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Downloads</a>
+
+        <!-- LINKS HORIZONTAIS (agora com "Início" incluso) -->
+        <div class="footer-links-horizontal">
+          <a href="index.html">Início</a>
+          <a href="paulofagoto.html">Sobre Mim</a>
+          <a href="depoimentos.html">Depoimentos</a>
+          <a href="downloads.html">Downloads</a>
+          <!-- Adicione novos links aqui, eles ficarão lado a lado -->
+        </div>
       </div>
 
       <div class="footer-col">

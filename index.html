@@ -1335,6 +1335,26 @@
       margin: 0 auto;
     }
 
+    /* --- NOVO: LINKS HORIZONTAIS NO FOOTER --- */
+    .footer-links-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-links-horizontal a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .footer-links-horizontal a:hover {
+      color: var(--primary);
+    }
+
     /* ============================================
        BOTÃO FLUTUANTE WHATSAPP
        ============================================ */
@@ -1769,10 +1789,15 @@
         <h4>Paulo Fagoto Informática</h4>
         <p>Soluções profissionais em manutenção de computadores, formatação de notebooks, otimização de sistemas e suporte remoto para todo o Brasil.</p>
         <p style="margin-top:0.8rem; color:var(--primary); font-weight:bold; font-size:0.85rem;">CNPJ: 64.383.742/0001-26</p>
-		<a href="paulofagoto.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Sobre Mim - Paulo Fagoto</a>
-		<a href="formatacaovalinhos.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Formatação de Computadores</a>
-		<a href="depoimentos.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Depoimentos de Clientes</a>
-        <a href="downloads.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Downloads Gratuitos de Programas</a>
+
+        <!-- LINKS HORIZONTAIS -->
+        <div class="footer-links-horizontal">
+          <a href="paulofagoto.html">Sobre Mim</a>
+          <a href="formatacaovalinhos.html">Formatação</a>
+          <a href="depoimentos.html">Depoimentos</a>
+          <a href="downloads.html">Downloads</a>
+          <!-- Adicione novos links aqui, eles ficarão na mesma linha -->
+        </div>
       </div>
 
       <div class="footer-col">

@@ -895,7 +895,7 @@
     }
 
     /* ============================================
-       FOOTER (mesmo do index)
+       FOOTER (com links horizontais)
        ============================================ */
     .footer-info {
       background: #0a0f1c;
@@ -954,6 +954,26 @@
 
     .copy-addr-btn:hover {
       background: rgba(16, 185, 129, 0.08);
+    }
+
+    /* --- LINKS HORIZONTAIS --- */
+    .footer-links-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .footer-links-horizontal a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: var(--transition);
+      white-space: nowrap;
+    }
+
+    .footer-links-horizontal a:hover {
+      color: var(--primary);
     }
 
     .social-links {
@@ -1322,17 +1342,26 @@
 
   </main>
 
-  <!-- FOOTER (mesmo do index) -->
+  <!-- FOOTER ATUALIZADO: LINKS HORIZONTAIS + 4 COLUNAS -->
   <footer class="footer-info">
     <div class="footer-grid">
+      <!-- Coluna 1: informações + links horizontais -->
       <div class="footer-col">
         <h4>Paulo Fagoto Informática</h4>
         <p>Soluções profissionais em manutenção de computadores, formatação de notebooks, otimização de sistemas e suporte remoto para todo o Brasil.</p>
         <p style="margin-top:0.8rem; color:var(--primary); font-weight:bold; font-size:0.85rem;">CNPJ: 64.383.742/0001-26</p>
-        <a href="downloads.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Downloads Gratuitos</a>
-        <a href="depoimentos.html" style="color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-top: 0.5rem;">Depoimentos de Clientes</a>
+
+        <!-- LINKS HORIZONTAIS (substituindo os links em bloco) -->
+        <div class="footer-links-horizontal">
+          <a href="index.html">Início</a>
+          <a href="formatacaovalinhos.html">Formatação</a>
+          <a href="downloads.html">Downloads</a>
+          <a href="depoimentos.html">Depoimentos</a>
+          <!-- Adicione novos links aqui, eles ficarão lado a lado -->
+        </div>
       </div>
 
+      <!-- Coluna 2: Endereço -->
       <div class="footer-col">
         <h4>Endereço Local (Valinhos/SP)</h4>
         <p>Rua Campos Salles - Vila Faustina II</p>
@@ -1340,6 +1369,7 @@
         <button id="btn-copy-address" class="copy-addr-btn" aria-label="Copiar endereço completo">📋 Copiar Endereço Completo</button>
       </div>
 
+      <!-- Coluna 3: Contato -->
       <div class="footer-col">
         <h4>Contato Direto</h4>
         <p><strong>WhatsApp:</strong> (19) 97154-0808</p>
@@ -1347,6 +1377,7 @@
         <p><strong>YouTube:</strong> @paulofagoto</p>
       </div>
 
+      <!-- Coluna 4: Redes Sociais -->
       <div class="footer-col">
         <h4>Redes Sociais</h4>
         <div class="social-links">
